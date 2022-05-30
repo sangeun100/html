@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+<style>
+	div > p{
+	color: red;
+	}
+</style>
+
+<h1>라쿤 기본정보</h1>
+<img src ="img/018.jfif">
+<div><p>식육목 아메리카너구리과에 속하는 포유류 동물.
+크기는 몸길이 40~140cm, 어깨높이 20~40cm, 몸무게 5~29kg 정도에 달한다.</p></div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Form Tag</h1>
+	<form action="regiester2" method="POST">
+	<fieldset>
+	<lengend>회원가입</lengend>
+	ID<input type="text" name="id"><br>
+	PWD<input type="password" name="pwd"><br>
+	AGE<input type="number" name="age"><br>
+	BIRTH<input type="date" name="birth"><br>
+	GENDER<br> <!-- radio는 중복 체크 불가 -->
+	<input type="radio" name="gender" value="f">Female<br>
+	<input type="radio" name="gender" value="m">Male<br>
+	<input type="radio" name="gender" value="a">aje<br>
+	HOBBY<br> <!-- checkbox 여러개 체크 가능 -->
+	<input type="checkbox" name="hobby" value="s">Study<br>
+	<input type="checkbox" name="hobby" value="t">Train<br>
+	<input type="checkbox" name="hobby" value="e">Eat<br>
+	Car<br>
+	<select name="car">
+	<option value="k1">K1</option>
+	<option value="k2">K2</option>
+	<option value="k3">K3</option>
+	</select><br>
+	Resume<br>
+	<textarea rows="10" cols="100"></textarea>
+	<input type="hidden" name="Loginid" value="Leejan">
+	<input type="range" name="range" size="10" step="1"><br>
+	</fieldset>
+	<input type="submit" value="REGIESTER">
+	<input type="reset" value="RESET">
+	</form>
+</body>
+</html>

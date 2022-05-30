@@ -1,0 +1,48 @@
+package com.multi.contromller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping("/login")
+	public String login(Model m) {
+		m.addAttribute("center","login/center");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/login1")
+	public String login1(Model m) {
+		m.addAttribute("center","login/login1");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/register")
+	public String food2(Model m) {
+		m.addAttribute("center","login/register");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	/*
+	 * @RequestMapping("/register_formimpl") public String register_formipml(Model
+	 * m,String id, String pwd) { System.out.println(id+""+pwd);
+	 * m.addAttribute("center","ajax/registerok");
+	 * m.addAttribute("left","ajax/left"); return "main"; }
+	 */
+
+	@RequestMapping("login/register_form1impl")
+	public String register_form1ipml(Model m, String name, String id, String pwd, String sel, String comment) {
+	System.out.println(name+""+id+""+pwd+""+sel+""+comment);
+	m.addAttribute("center","login/registerok");
+	m.addAttribute("left","login/left");
+		return "main";	
+	}
+	/*
+	 * @RequestMapping("/food3") public String food3(Model m) {
+	 * m.addAttribute("center","food/food3"); m.addAttribute("left","food/left");
+	 * return "main"; }
+	 */
+
+}

@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<style>
+#imgs{
+width:400px;
+height:400px;
+}
+#auto{
+width:60px;
+height:40px;
+border: 1px solid blue;
+border-radius: 30%;
+color:yellow;
+background: skyblue;
+}
+#stop{
+width:60px;
+height:40px;
+border: 1px solid blue;
+border-radius: 30%;
+color:yellow;
+background: skyblue;
+}
+</style>
+<script>
+$(document).ready(function(){
+	var imgs = ['img/a1.jfif','img/a2.jfif','img/a3.jfif'];
+	var cnt = 0;
+	var auto = null;
+	
+	$('#back').click(function(){
+		
+			cnt--;
+		$('#imgs').attr('src',imgs[Math.abs(cnt % imgs.length)]);
+	});
+	
+	$('#auto').click(function(){
+	auto= setInterval(function(){
+	cnt++;
+	
+	$('#imgs').attr('src',imgs[Math.abs(cnt % imgs.length)]);
+	}, 500);
+	});
+	
+	$('#stop').click(function(){
+	clearInterval(auto); //auto를 더이상 진행하지 마라
+	});
+	
+	$('#for').click(function(){
+	cnt++;
+	
+	$('#imgs').attr('src',imgs[Math.abs(cnt % imgs.length)]);
+	});
+	
+	$('#imgs').attr('src',imgs[cnt]);
+	});
+</script>
+<h1>JQ15 Main</h1>
+
+<button id="back">Back</button>
+<button id="auto">Auto</button>
+<button id="stop">Stop</button>
+<button id="for">Forward</button>
+<hr>
+<img id="imgs">
+

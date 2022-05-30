@@ -1,0 +1,9 @@
+<meta charset="UTF-8">
+
+		<div class="col-sm-1 sidenav"
+	     th:insert="${left} ? ${left} : left"> 
+	    </div> 
+	    <div class="col-sm-9 text-left" 
+	    th:insert="${center} ? ${center} : center"> 
+	    </div>
+<h1>food center</h1>

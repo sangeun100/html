@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<style>
+	#result{
+		width: 500px;
+		border: 2px solid blue;
+	};
+	h1{
+	font-family: 'Poor Story', cursive;
+	};
+	button{
+	font-family: 'Poor Story', cursive;
+	};
+	#result{
+	font-family: 'Poor Story', cursive;
+	};
+</style>
+
+<script>
+//jquery 는 함수로 들어가야 함 ->val();
+function display(data) {
+	var txt = '<h2>'+data+'</h2>';
+	$('#result').html(txt); 
+}; 
+function getdata(txt) {
+	$.ajax({
+		url:'search', 
+		data:{'s':txt},
+		success:function(data){
+			display(data);
+		}
+	});
+};
+
+$(document).ready(function () {
+	$('button').click(function () {
+		var txt = $('#txt').val();
+		getdata(txt);
+	}); 
+});
+</script>
+
+<h1>아이디별 등급확인</h1>
+<input type="text" id="txt">
+<button>등급확인</button>
+<div id="result"></div>

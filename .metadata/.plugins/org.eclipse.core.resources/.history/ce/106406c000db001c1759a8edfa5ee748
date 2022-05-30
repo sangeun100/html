@@ -1,0 +1,49 @@
+package com.multi.contromller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping("/login")
+	public String login(Model m) {
+		m.addAttribute("center","login/center");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/login1")
+	public String login1(Model m) {
+		m.addAttribute("center","login/login1");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/register")
+	public String register(Model m) {
+		m.addAttribute("center","login/register");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	
+	@RequestMapping("/register_form1impl")
+	public String register_form1ipml(Model m, String name, String id, String pwd, String sel, String comment) {
+	System.out.println(name+""+id+""+pwd+""+sel+""+comment);
+	m.addAttribute("center","login/registerok");
+	m.addAttribute("left","login/left");
+		return "main";	
+	}
+	@RequestMapping("/loginimpl")
+	public String loginimpl(Model m,String id, String pwd) {
+		System.out.println(id+""+pwd);
+		if(id.equals("aaaa") && pwd.equals("1111")) {
+			m.addAttribute("loginid",id);
+			m.addAttribute("center","login/loginok");
+		}else {
+			m.addAttribute("center","login/loginfail");
+		}
+		m.addAttribute("left","login/left");
+		return "main";	
+	}
+
+}

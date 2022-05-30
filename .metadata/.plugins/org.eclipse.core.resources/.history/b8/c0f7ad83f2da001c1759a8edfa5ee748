@@ -1,0 +1,34 @@
+package com.multi.contromller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping("/login")
+	public String login(Model m) {
+		m.addAttribute("center","login/center");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/login1")
+	public String login1(Model m) {
+		m.addAttribute("center","login/login1");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	@RequestMapping("/register")
+	public String food2(Model m) {
+		m.addAttribute("center","login/food2");
+		m.addAttribute("left","login/left");
+		return "main";
+	}
+	/*
+	 * @RequestMapping("/food3") public String food3(Model m) {
+	 * m.addAttribute("center","food/food3"); m.addAttribute("left","food/left");
+	 * return "main"; }
+	 */
+
+}

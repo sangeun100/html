@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poor+Story&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3384ea1cdae2b087ed87b5e3951aa910"></script>
+<style>
+.body {
+	color: #F2CB61;
+	font-family: 'Poor Story', cursive;
+}
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+	margin-bottom: 10px;
+	border-radius: 0;
+}
+
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+	margin-bottom: 0;
+	font-family: 'Poor Story', cursive;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+
+jumbotron>container text-center {
+	color: #F2CB61;
+	font-family: 'Zen Loop', cursive;
+}
+</style>
+</head>
+<body>
+
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>너굴맨은 강하지</h1>
+			<p>라쿤을 사랑하는 사람들</p>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">HOME</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<!--         <li><a href="/">Home</a></li>
+ -->
+					<li><a href="about">ABOUT</a></li>
+					<li><a href="photo">PHOTO</a></li>
+					<li><a href="goods">GOODS</a></li>
+					<li><a href="member">MEMBER</a></li>
+					<li><a href="login">LOGIN/REGISTER</a></li>
+				</ul>
+				<!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 장바구니</a></li>
+      </ul> -->
+			</div>
+		</div>
+	</nav>
+	<div class="col-sm-9 text-left"
+		th:insert="${center} ? ${center} : center"></div>
+	<div class="col-sm-1 sidenav" th:insert="${left} ? ${left} : left">
+	</div>
+
+</body>
+</html>

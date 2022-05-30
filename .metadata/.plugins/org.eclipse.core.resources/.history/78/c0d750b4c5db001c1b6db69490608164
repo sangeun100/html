@@ -1,0 +1,90 @@
+<meta charset="UTF-8">
+<style>
+#result {
+	width: 300px;
+	border: 2px solid red;
+}
+h1{
+	font-family: 'Poor Story', cursive;
+	}
+</style>
+<script>
+function display(d) {
+		var txt = '';
+		$(d).each(function (index,item) {
+			txt += '<h3>';
+			txt += item.id+''+item.name;
+			txt += '</h3>';
+		});
+		
+		/* for (var i in d) {
+			txt +='<h3>';
+			txt += d[i].id+''+d[i].name+''+d[i].age;
+			txt +='</h3>';
+		};  */
+		
+		$('#result').html(txt);
+	};
+	
+function getdata1() {
+	var data1 = [
+		{id:'id01',name:'le*'},	
+		{id:'id02',name:'ki*'},	
+		{id:'id03',name:'ha*'},	
+		{id:'id04',name:'so*'},	
+		{id:'id05',name:'ko*'}
+	];
+	display(data1);
+};
+ function getdata2() {
+	var data2 = [
+		{id:'id06',name:'le*',age:10},	
+		{id:'id07',name:'ki*',age:20},	
+		{id:'id08',name:'ha*',age:30},	
+		{id:'id09',name:'so*',age:40},	
+		{id:'id10',name:'ko*',age:50}
+	];
+	display(data2);
+};
+function getdata3() {
+	var data3 = [
+		{id:'id11',name:'le*',age:10},	
+		{id:'id12',name:'ki*',age:20},	
+		{id:'id13',name:'ha*',age:30},	
+		{id:'id14',name:'so*',age:40},	
+		{id:'id15',name:'ko*',age:50}
+	];
+	display(data3); 
+};
+/* $(document).ready(function () {
+	$('#getdata1').click(function () {
+		getdata1();
+		$('#result').slideDown();
+	}); */
+$(document).ready(function () {	
+	$('#Gold').click(function () {
+		getdata1();
+		$('#result').slideDown();
+	});
+	$('#Silver').click(function () {
+		getdata2();
+		$('#result').slideDown();
+	});
+	$('#Bronze').click(function () {
+		$('#result').slideDown();
+		getdata3();
+	});
+	$('#hide').click(function () {
+		$('#result').slideUp();
+	});
+});
+</script>
+<h1>멤버별 등급안내</h1>
+
+<!-- <button id="getdata">GET DATA</button> -->
+<button id="Gold">Gold</button>
+<button id="Silver">Silver</button>
+<button id="Bronze">Bronze</button>
+<button id="hide">Hide</button>
+
+<div id="result"></div>

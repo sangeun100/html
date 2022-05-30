@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="day02"/>
+<aop-project name="day04"/>
+<aop-project name="day022"/>
+<aop-project name="day033"/>
+<aop-project name="day044"/>
+<aop-project name="day046"/>
+<aop-project name="day03ws"/>
+<aop-project name="html3"/>
+<aop-project name="day03"/>
+<aop-project name="day05"/>
+<aop-project name="day045"/>
+<aop-project name="day047"/>
+<aop-project name="temp"/>
+<aop-project name="day061"/>
+<aop-project name="htmlws"/>
+<aop-project name="html2"/>
+</aop-reference-model>

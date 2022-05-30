@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+
+<!-- <script>
+function display() {
+	
+}
+$(document).ready(function () {
+	var imgs = ['img/a3.jfif'];
+});
+</script> -->
+
+<h1>food1</h1>
+<img src="img/a3.jfif" class="img-rounded" alt="Cinque Terre">

@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<style> 
+h1{
+font-family: 'Poor Story', cursive;
+}
+#image{
+width: 300px;
+height: 500px;
+}
+</style>
+<script>
+$(document).ready(function () {
+	var imgs = ['img/015.jpg','img/016.jpg','img/017.jpg'];
+	var cnt = 0;
+	setInterval(function () { 
+		$('#image').attr('src',imgs[cnt % imgs.length]);
+		$('#image').text(cnt);
+		cnt++;
+		}, 1000);
+});
+</script>
+<h1>GOODS(광고)</h1>
+<img id="image">

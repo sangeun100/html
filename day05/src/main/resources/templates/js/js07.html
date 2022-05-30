@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+<style>
+
+</style>
+<script>
+function calc(n) {
+		//alert(n);
+		if (n == '=') {
+			var data = document.querySelector('#txt').value;
+			var result = eval(data);
+			document.querySelector('#txt').value = result;
+			return;
+		}
+		var data = document.querySelector('#txt').value;
+		data += n;
+		document.querySelector('#txt').value = data;
+		};
+
+</script>
+<h1>JS07 Main(ws:calc)</h1>
+<table>
+	<tr>
+	<td colspan="4"><input type="text" id="txt"></td>
+	</tr>
+	
+
+	<tr>
+	<td><button onclick="calc('1');">1</button></td>
+	<td><button onclick="calc('2');">2</button></td>
+	<td><button onclick="calc('3');">3</button></td>
+	<td><button onclick="calc('+');">+</button></td>
+	</tr>
+	
+	<tr>
+	<td><button onclick="calc('4');">4</button></td>
+	<td><button onclick="calc('5');">5</button></td>
+	<td><button onclick="calc('6');">6</button></td>
+	<td><button onclick="calc('-');">-</button></td>
+	</tr>
+	
+	<tr>
+	<td><button onclick="calc('7');">7</button></td>
+	<td><button onclick="calc('8');">8</button></td>
+	<td><button onclick="calc('9');">9</button></td>
+	<td><button onclick="calc('x');">x</button></td>
+	</tr>
+	
+	<tr>
+	<td><button onclick="calc('0');">0</button></td>
+	<td><button onclick="calc('.');">.</button></td>
+	<td><button onclick="calc('/');">/</button></td>
+	<td><button onclick="calc('=');">=</button></td>
+	</tr>
+</tbody>
+</table>
+<!-- <input type="text" id="data">  -->
+
+<h3 id="result"></h3>

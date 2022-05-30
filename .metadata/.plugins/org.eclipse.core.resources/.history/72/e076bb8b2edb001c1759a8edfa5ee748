@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<style>
+p{
+font-family: 'Poor Story', cursive;
+}
+</style>
+<p><a href="about1">라쿤 기본정보</a></p>
+<p><a href="about2">너구리와의 관계</a></p>
+<p><a href="about3">특징</a></p>
+<!-- <p><a href="about4">창작물에서의 라쿤</a></p> -->
+<p><a href="about5">라쿤을 볼 수 있는 곳</a></p>
+

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<style>
+
+<!--div>.item active>container {
+	width: 500px;
+	height: 150px;
+	margin: 5px;
+}
+
+div>ol>li {
+	width: 500px;
+	height: 150px;
+	margin: 5px;
+}-->
+
+
+h2 {
+	font-family: 'Poor Story', cursive;
+}
+</style>
+<h2>라쿤동영상</h2>
+<div>
+	<video src="mv/movie.mp4" controls="controls"></video>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<style>
+
+
+</style>
+<script>
+<div class="container">
+<h2>Rounded Corners</h2>
+<p>The .img-rounded class adds rounded corners to an image (not available in IE8):</p>            
+<img src="img/a3jfif" class="img-rounded" alt="Cinque Terre" width="304" height="236"> 
+</div>
+</script>
+
+<h1>food1</h1>

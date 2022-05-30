@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<style>
+#map {
+	width: 500px;
+	height: 400px;
+	border: 2px solid red;
+}
+</style>
+
+<script>
+var map = null;
+function gomap(lat,lng) {
+	map.panTo(new kakao.maps.LatLng(lat,lng));
+};
+function displaymap() {
+	var mapContainer = document.getElementById('map'); // 지도를 표시할 div 
+	var mapOption = {
+		center : new kakao.maps.LatLng(37.503376,127.049776), // 지도의 중심좌표
+ 		level :3
+	};
+	var map =  new kakao.maps.Map(mapContainer, mapOption);
+	};
+	
+/* #서울 37.55041692365908, 126.91037178013711
+#부산 35.17642453774257, 129.16669784099807
+#광주 35.16173425533525, 126.88758871719189  */
+
+	$(document).ready(function() {
+		$('#s').click(function() {
+			gomap(37.55041692365908, 126.91037178013711);
+		});
+		$('#b').click(function() {
+			gomap(35.17642453774257, 129.16669784099807)
+		});
+		$('#g').click(function() {
+			gomap(35.16173425533525, 126.88758871719189)
+		});
+
+	});
+</script>
+<h1>AJ10 Main</h1>
+<button id="s">Seoul</button>
+<button id="sc">Seoul Content</button>
+<button id="b">Busan</button>
+<button id="bc">Busan Content</button>
+<button id="g">Gwangju</button>
+<button id="gc">Gwangju Content</button>
+<div id="map"></div>
+

@@ -1,0 +1,115 @@
+<meta charset="UTF-8">
+
+
+<script>
+/* function checkid(id) {
+	$.ajax({
+		url:'checkid',
+		data:{'id':id},
+		success:function(data){
+		if(data == '1') { 
+			$('#iid').text('사용가능 합니다.');
+		}else {
+			$('#iid').text('사용 불가능 합니다.');
+		}
+	  }
+	});
+}; */
+$(document).ready(function () {
+	$('input[name="name"]').keyup(function () { // 이름은 3자리 이상이어야 함
+		var id = $(this).val();
+		if (id.length < 3) {
+			$('#sname').text('3자리 이상이어야 합니다.');
+		  }else { //3자리 이상이면 서버에 전송
+			  $('#sname').text('');
+		  }
+	$('input[name="id"]').keyup(function () { 
+		var id = $(this).val();
+		if (id.length < 3) {
+			$('#iid').text('3자리 이상이어야 합니다.');
+			 }else {
+				 $('#iid').text('');
+				//checkid(id); //ajax에서 aaaa~ cccc 는 사용 불가 아이디 
+		}
+		
+	$('button').attr('disabled','disabled'); // 다 입력안하면 클릭불가
+	$('button').click(function () {
+			
+		$('#register_form1').attr({ //등록페이지 받아오기, 제출
+			'action':'register_form1impl',
+			'method':'post'
+		});
+		$('#register_form1').submit();
+		});
+	$('button').removeAttr('disabled'); // 다 입력하면 클릭 가능
+	});
+  });
+});
+</script>
+<h1>회원가입</h1>
+
+<div>
+<h2>회원가입을 축하합니다.</h2>
+<form id="register_form1">
+<!-- 이름칸 -->
+<div class="form-group"> 
+	  <label for="name">이름:</label>
+	  <input type="text" name="name" class="form-control" id="name" placeholder="Input name">
+      <span id="sname"></span>
+	</div>
+<!-- 아이디칸 -->
+<div class="form-group"> 
+	  <label for="id">ID:</label>
+	  <input type="text" name="id" class="form-control" id="id" placeholder="Input id">
+      <span id="iid"></span>
+	</div>
+<!-- 비밀번호 칸  -->
+	<div class="form-group">
+	  <label for="pwd">Password:</label>
+	  <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Input pwd">
+	  <span id="pwd" class="help-block"></span>
+	</div>
+<!-- 닉네임칸 -->
+<div class="form-group"> 
+	  <label for="id">사용하실 닉네임:</label>
+	  <input type="text" name="id" class="form-control" id="id" placeholder="Input id">
+      <span id="iid"></span>
+	</div>	
+	
+<!-- 성별
+	<div class="radio">
+	  <label><input type="radio" name="optradio2" value="op2">남성</label>
+	<span id="optradio2"></span></div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio3" value="op3">여성</label>
+	<span id="optradio3"></span></div> -->
+	
+<!-- 반려동물 여부-->
+	<div class="radio">
+	<label for="comment"><div>반려동물 여부:</div>></label>
+	  <label><input type="radio" name="optradio2" value="op2">예</label>
+	<span id="optradio2"></span></div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio3" value="op3">아니오</label>
+	<span id="optradio3"></span></div>
+<!-- 국가 -->
+<div class="form-group">
+	  <label for="sel">국가:</label>
+	  <select class="form-control" id="sel" name="sel">
+	    <option value="1">한국</option>
+	    <option value="2">미국</option>
+	    <option value="3">일본</option>
+	    <option value="3">중국</option>
+	    <option value="4">그 외</option>
+	  </select>
+	<span id="sel" class="help-block"></span>
+	</div>
+<!-- 코멘트 -->
+<div class="form-group">
+  <label for="comment">어떤 경로로 카페를 알게 되었나요:</label>
+  <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+ <span id="comment" class="help-block"></span>
+ </div>
+<button id="register_bt" type="button">SUBMIT</button>
+</form>
+</div>

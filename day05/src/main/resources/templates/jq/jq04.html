@@ -1,0 +1,97 @@
+<meta charset="UTF-8">
+<script>
+$(document).ready(function(){
+	
+	$('#register_form > input[name="name"]').blur(function () {
+		var name = $(this).val();
+		if(name == ''){
+			$(this).focus();
+		};
+	});
+	//alert('name');
+	
+	$('#register_form > input[name="age"]').blur(function () {
+		var age = $(this).val();
+		if(age == ''){
+			$(this).focus();
+		};
+	});
+	/* $('#register_form > input[name="address"]').blur(function () {
+		var adress = $(this).val();
+		if(adress == ''){
+			$(this).focus();
+		};
+	});
+	$('#register_form > input[name="phone"]').blur(function () {
+		var phone = $(this).val();
+		if(phone == ''){
+			$(this).focus();
+		}; */
+	});
+	
+	$('button').click(function () {
+		var name = $('input[name="name"]').val();
+		var age = $('input[name="age"]').val();
+
+		if(name == ''){
+			$('#sname').text('Fill in the blank');
+			$('input[name="name"]').focus();
+			return;
+		};
+		if(age == ''){
+			$('#sage').text('Fill in the blank');
+			$('input[name="age"]').focus();
+			return;
+		};
+		/* if(address == ''){
+			$('#sadress').text('Fill in the blank');
+			$('input[name="address"]').focus();
+			return;
+		};
+		if(phone == ''){
+			$('#sphone').text('Fill in the blank');
+			$('input[name="rrn"]').focus();
+			return;
+		};
+		
+		$('#login_form').attr({
+			'action':'loginimpl',
+			'method':'post'
+		});
+		$('#login_form').submit();
+	}); */
+});
+</script>
+
+<h1>JQ04 Main</h1>
+<h1>Register</h1>
+
+<form id="/Register_form">
+    <div class="form-group">
+      <label for="name">name:</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="age">age:</label>
+      <input type="number" class="form-control" id="age" name="age">
+    </div>
+  <!--  <div class="form-group">
+    <label for="birth">birth:</label>
+    <input type="date" name="birth">
+    </div>
+    <div class="form-group">
+      <label for="adress">address:</label>
+      <input type="text" class="form-control" id="address" name="address">
+    </div>
+    <div class="phone">
+      <label for="phone">phone number:</label>
+      <input type="number" class="form-control" id="phone" name="phone">
+    </div>
+     <div class="checkbox">
+      <label><input type="checkbox" value="">Male</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Female</label>
+    </div>--> 
+    <button type="submit" class="btn btn-default">Register</button>
+</form> 

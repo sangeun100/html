@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<style>
+	div{
+	float:center;
+	}
+	
+</style>
+  <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      <img src=img/002.jpg alt="라쿤" width="800px" height="400px" >
+      <div class="carousel-caption">
+        <h3>너굴맨은 강하지</h3>
+        <p>라쿤을 사랑하고 좋아하는 사람들의 모임입니다. 라쿤을 좋아하시는 분이라면 언제든지 환영입니다!</p>
+      </div>
+    </div>

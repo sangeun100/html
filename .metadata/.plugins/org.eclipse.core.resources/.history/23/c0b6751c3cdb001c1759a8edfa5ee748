@@ -1,0 +1,16 @@
+package com.multi.contromller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MemberController {
+	
+	@RequestMapping("/member")
+	public String member(Model m) {
+		m.addAttribute("center","member/center");
+		m.addAttribute("left","member/left");
+		return "main";
+	}
+}

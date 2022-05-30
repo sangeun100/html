@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+
+<script>
+$(document).ready(function () {
+	var imgs = ['img/a1.jfif'];
+});
+</script>
+
+<h1>food1</h1><script>
+$(document).ready(function () {
+	var imgs = ['img/a1.jfif'];
+});
+</script>
